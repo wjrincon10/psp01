@@ -5,6 +5,7 @@
  */
 package edu.uniandes.ecos.controller;
 
+import edu.uniandes.ecos.view.MainView;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
@@ -35,17 +36,16 @@ public class App extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        /*MainView.showHome(req,resp);
-        MainView.showResults(req,resp,0.0," ",0.0);    */   
+        MainView.showHome(req,resp);
+        MainView.showResults(req,resp," "," ");       
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
                 
         try {
-           // MainView.showHome(req,resp);
-           // consoleInput(req, resp);
-        } catch (Exception ex) {
+            MainView.showHome(req,resp);
+            } catch (Exception ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

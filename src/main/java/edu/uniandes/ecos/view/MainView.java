@@ -30,11 +30,10 @@ public class MainView {
 
     }
     
-    public static void showResults(HttpServletRequest req, HttpServletResponse resp, Double stdDev, String values, Double mean)
+    public static void showResults(HttpServletRequest req, HttpServletResponse resp, String vlrProgram1, String vlrProgram2)
             throws ServletException, IOException {
-        resp.getWriter().println("<b>List:</b> "+values +"<br>");
-        resp.getWriter().println("<b>Mean:</b> "+mean + "<br>");
-        resp.getWriter().println("<b>STD: </b> "+stdDev + "<br>");
+        resp.getWriter().println("<b>Programa 1:</b> "+ vlrProgram1 +"<br>");
+        resp.getWriter().println("<b>Programa 2:</b> "+ vlrProgram2 + "<br>");
     }
     
     public static void error(HttpServletRequest req, HttpServletResponse resp)
